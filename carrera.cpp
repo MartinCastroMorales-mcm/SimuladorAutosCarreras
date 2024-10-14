@@ -3,12 +3,14 @@
 #include <mutex>
 #include <thread>
 #include <stdlib.h>
+#include <time.h>
 
 std::mutex auto_pos_lock;
 
 void sprint(int tid, std::vector<int> metrosAuto, int metros, std::vector<int>& lugares) {
     int avance;
     long lugar = 0;
+    srand(time(0));
     while(true) {
         int aleatorio = rand();
         avance = (aleatorio % 10) + 1;
@@ -56,7 +58,7 @@ int main(int argc, char** argv) {
     printf("Lugar   Auto\n");
     printf("-----------------------------------------\n");
     for(int i = 0; i < (int) lugares.size(); i++) {
-        printf("%d        Auto%d\n", i, lugares.at(i));
+        printf("%d        Auto%d\n", i + 1, lugares.at(i));
     }
     return 0;
 }
