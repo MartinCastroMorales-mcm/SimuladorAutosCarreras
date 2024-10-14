@@ -40,6 +40,7 @@ int main(int argc, char** argv) {
     int metros = std::stoi(argv[1]);
     int autos = std::stoi(argv[2]);
     printf("Distancia total carrera: %d metros\n", metros);
+    printf("-----------------------------------------\n");
 
     std::vector<int> metrosAuto;
     std::vector<std::thread*> threads;
@@ -53,7 +54,7 @@ int main(int argc, char** argv) {
         delete threads.at(i);
     }
     printf("Lugar   Auto\n");
-    printf("---------------------------\n");
+    printf("-----------------------------------------\n");
     for(int i = 0; i < (int) lugares.size(); i++) {
         printf("%d        Auto%d\n", i, lugares.at(i));
     }
