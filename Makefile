@@ -1,2 +1,2 @@
-main: main.cpp
-	g++ main.cpp -Wall -Werror -g -o main
+añlksjdfñals: carrera.cpp
+	g++ carrera.cpp -Wall -Werror -g -o carrera -std=c++11
