@@ -38,6 +38,7 @@ void sprint(int tid, std::vector<int> metrosAuto, int metros, std::vector<int>& 
 int main(int argc, char** argv) {
     if(argc != 3) {
         printf("Se requieren dos argumentos\n");
+        return 1;
     }
     int metros = std::stoi(argv[1]);
     int autos = std::stoi(argv[2]);
